@@ -53,7 +53,8 @@ pipeline{
         //   }
         //}
         stage('SonarQube Analysis') {
-          steps {           
+          steps {
+		    sh 'export PATH="$PATH:/var/jenkins_home/.dotnet/tools"'
 			sh 'dotnet tool install --global coverlet.console'
 			sh 'dotnet tool install --global dotnet-sonarscanner'
 			sh 'dotnet sonarscanner begin /k:"springboot-dotnet" /d:sonar.host.url="${SONARQUBE_HOST}" /d:sonar.login="squ_fca5947b71a2534773bd48b43177eb258787b263" /d:sonar.cs.opencover.reportsPaths=coverage.xml'
