@@ -25,6 +25,7 @@ pipeline{
         stage('Compiling') {
           steps {		    
             sh 'dotnet --version'
+			sh 'dotnet sonarscanner begin /k:"springboot-dotnet" /d:sonar.host.url="${SONARQUBE_HOST}" /d:sonar.login="squ_fca5947b71a2534773bd48b43177eb258787b263"'
           }
         }
 		
