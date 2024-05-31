@@ -19,7 +19,7 @@ pipeline{
 		SONARQUBE_HOST = "http://3.107.48.153:9000"
         DOCKER_CREDS = credentials('jenkins_docker_token')	
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
-		PATH= "/var/jenkins_home/.dotnet/tools/"
+		//PATH= "/var/jenkins_home/.dotnet/tools/"
     }  
 
     stages{       
