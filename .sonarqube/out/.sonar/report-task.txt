@@ -1,6 +1,0 @@
-projectKey=springboot-dotnet
-serverUrl=http://localhost:9000
-serverVersion=10.5.1.90531
-dashboardUrl=http://localhost:9000/dashboard?id=springboot-dotnet
-ceTaskId=8e9b2da8-6886-4d44-a127-f3c9dd7b2d45
-ceTaskUrl=http://localhost:9000/api/ce/task?id=8e9b2da8-6886-4d44-a127-f3c9dd7b2d45
