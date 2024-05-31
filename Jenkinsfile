@@ -28,7 +28,7 @@ pipeline{
         }
         stage('Packaging') {
           steps {		    
-            dotnetPublish configuration: '-o app/', project: '.', sdk: 'dotnetsdk', selfContained: false
+            dotnetPublish outputDirectory: 'app/', sdk: 'dotnetsdk', selfContained: false
           }
         }
         stage('Verifying') {
