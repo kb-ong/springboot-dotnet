@@ -1,0 +1,26 @@
+SF:C:\Users\kong\springboot-dotnet\HelloWorld\Service.cs
+FN:14,System.Void com.example.demo.Service::logging1()
+FNDA:1,System.Void com.example.demo.Service::logging1()
+DA:15,1
+DA:16,1
+DA:17,1
+FN:17,System.Void com.example.demo.Service::logging2()
+FNDA:1,System.Void com.example.demo.Service::logging2()
+DA:18,1
+DA:19,1
+DA:20,1
+FN:6,System.Void com.example.demo.Service::.cctor()
+FNDA:1,System.Void com.example.demo.Service::.cctor()
+DA:7,1
+DA:8,1
+DA:10,1
+DA:11,2
+DA:12,1
+DA:13,1
+LF:12
+LH:12
+BRF:0
+BRH:0
+FNF:3
+FNH:3
+end_of_record

@@ -1,3 +1,59 @@
+SF:C:\Users\kong\springboot-dotnet\HelloWorld\Program.cs
+FN:3,System.Void Program::<Main>$(System.String[])
+FNDA:0,System.Void Program::<Main>$(System.String[])
+DA:4,0
+DA:6,0
+DA:12,0
+DA:13,0
+DA:15,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+BRDA:6,20,0,0
+BRDA:6,20,1,0
+BRDA:18,87,0,0
+BRDA:18,87,1,0
+BRDA:38,15,0,0
+BRDA:38,15,1,0
+FN:52,System.DateOnly WeatherForecast::get_Date()
+FNDA:0,System.DateOnly WeatherForecast::get_Date()
+DA:53,0
+FN:54,System.Int32 WeatherForecast::get_TemperatureF()
+FNDA:0,System.Int32 WeatherForecast::get_TemperatureF()
+DA:55,0
+LF:36
+LH:0
+BRF:6
+BRH:0
+FNF:3
+FNH:0
+end_of_record
 SF:C:\Users\kong\springboot-dotnet\HelloWorld\Service.cs
 FN:14,System.Void com.example.demo.Service::logging1()
 FNDA:1,System.Void com.example.demo.Service::logging1()

@@ -1,0 +1,1 @@
+C:\Users\kong\springboot-dotnet\.sonarqube\out\0
