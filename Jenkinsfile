@@ -25,7 +25,7 @@ pipeline{
         stage('Compiling') {
           steps {		    
             //sh 'dotnet --version'
-			sh 'dotnet sonarscanner'
+			sh 'dotnet-sonarscanner'
           }
         }
 		
