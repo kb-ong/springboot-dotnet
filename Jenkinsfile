@@ -25,8 +25,8 @@ pipeline{
         stage('Compiling') {
           steps {		    
             //sh 'dotnet --version'
-			sh 'export PATH=$PATH:/var/jenkins_home/.dotnet/tools'
-			sh 'dotnet-sonarscanner'
+			//sh 'export PATH=$PATH:/var/jenkins_home/.dotnet/tools'
+			sh '/var/jenkins_home/.dotnet/tools/dotnet-sonarscanner'
           }
         }
 		
