@@ -25,13 +25,11 @@ pipeline{
     stages{       
         stage('Compiling') {
           steps {		    
-            //sh 'dotnet --version'
-			//sh 'export PATH=/var/jenkins_home/.dotnet/tools/dotnet-sonarscanner:$PATH'
-			//sh 'dotnet /var/jenkins_home/.dotnet/tools/dotnet-sonarscanner'
-			sh 'echo $PATH'
-			sh 'dotnet-sonarscanner'
+             sh 'dotnet sonarscanner begin /k:"springboot-dotnet" /d:sonar.host.url="${SONARQUBE_HOST}" /d:sonar.login="squ_fca5947b71a2534773bd48b43177eb258787b263" /d:sonar.cs.opencover.reportsPaths=coverage.xml'
           }
         }
+
+
 		
     }
 }
