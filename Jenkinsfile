@@ -45,5 +45,11 @@ pipeline{
             }
           }
         }
+        stage('Trivy Scanning') {
+           steps {
+              sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh |sh -s -- -b /usr/local/bin v0.51.2'             
+              sh 'trivy image --debug --scanners vuln --timeout 30m --no-progress -o trivy.txt ${registry}:latest'
+           }
+        }		
     }
 }
