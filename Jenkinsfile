@@ -26,5 +26,15 @@ pipeline{
             dotnetBuild project: '.', sdk: 'dotnetsdk'
           }
         }
+        stage('Packaging') {
+          steps {		    
+            dotnetPublish configuration: '-o app/', project: '.', sdk: 'dotnetsdk', selfContained: false
+          }
+        }
+        stage('Verifying') {
+          steps {		    
+            sh 'ls -la app/'
+          }
+        }			
     }
 }
