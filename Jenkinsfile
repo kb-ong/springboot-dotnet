@@ -13,7 +13,7 @@ pipeline{
 		 dotnetsdk 'dotnetsdk'
     }
     environment {
-        registry = "riko20xx/aspnetcore"
+        registry = "riko20xx/springboot-dotnet"
         dockerImage = ""
         DOCKER_HOST = "tcp://3.107.48.153:8443"
         DOCKER_CREDS = credentials('jenkins_docker_token')	

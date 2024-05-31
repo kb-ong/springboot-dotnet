@@ -3,6 +3,10 @@ using com.example.demo;
 
 var builder = WebApplication.CreateBuilder(args);
 
+System.Console.WriteLine(">>>>>>>>:" + args);
+
+
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
