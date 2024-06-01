@@ -1,10 +1,10 @@
 pipeline{
-    //agent {
-    //    node {
-    //        label 'java_jenkins'
-    //    }
-    //}
-	agent any
+    agent {
+        node {
+            label 'java_jenkins'
+        }
+    }
+	//agent any
     tools {
          dockerTool 'docker'
          maven 'Maven.3.9.6' 
@@ -47,12 +47,12 @@ pipeline{
             }
           }
         }
-        //stage('Trivy Scanning') {
-        //   steps {
-        //      sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh |sh -s -- -b /usr/local/bin v0.51.2'             
-        //      sh 'trivy image --debug --scanners vuln --timeout 30m --no-progress -o trivy.txt ${registry}:latest'
-        //   }
-        //}		
+        stage('Trivy Scanning') {
+           steps {
+              sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh |sh -s -- -b /usr/local/bin v0.51.2'             
+              sh 'trivy image --debug --scanners vuln --timeout 30m --no-progress -o trivy.txt ${registry}:latest'
+           }
+        }		
         stage('SonarQube Analysis') {
           steps {		    
              sh 'dotnet sonarscanner begin /k:"springboot-dotnet" /d:sonar.host.url="${SONARQUBE_HOST}" /d:sonar.login="${SONARQUBE_TOKEN}" /d:sonar.cs.opencover.reportsPaths=coverage.xml'
