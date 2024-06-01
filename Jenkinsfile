@@ -57,6 +57,7 @@ pipeline{
           steps {
 		     sh 'dotnet tool install --global coverlet.console'
 			 sh 'dotnet tool install --global dotnet-sonarscanner'
+			 sh 'export PATH="$PATH:/root/.dotnet/tools"'
              sh 'dotnet sonarscanner begin /k:"springboot-dotnet" /d:sonar.host.url="${SONARQUBE_HOST}" /d:sonar.login="${SONARQUBE_TOKEN}" /d:sonar.cs.opencover.reportsPaths=coverage.xml'
 			 sh 'dotnet build --no-incremental'
 			 sh 'coverlet ./HelloWorldNTest/bin/Debug/net8.0/HelloWorldNTest.dll --target "dotnet" --targetargs "test --no-build" -f=opencover -o="coverage.xml" --exclude-by-file "**/program.cs"'
