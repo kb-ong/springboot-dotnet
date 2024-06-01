@@ -113,3 +113,5 @@ C:\Users\kong\springboot-dotnet\HelloWorldNTest\obj\Debug\net8.0\HelloWorldNTest
 C:\Users\kong\springboot-dotnet\HelloWorldNTest\obj\Debug\net8.0\ref\HelloWorldNTest.dll
 C:\Users\kong\springboot-dotnet\HelloWorldNTest\bin\Debug\net8.0\System.Net.Http.Formatting.dll
 C:\Users\kong\springboot-dotnet\HelloWorldNTest\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\kong\springboot-dotnet\HelloWorldNTest\bin\Debug\net8.0\SendGrid.dll
+C:\Users\kong\springboot-dotnet\HelloWorldNTest\bin\Debug\net8.0\StarkbankEcdsa.dll
