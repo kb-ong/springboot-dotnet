@@ -111,3 +111,5 @@ C:\Users\kong\springboot-dotnet\HelloWorldNTest\obj\Debug\net8.0\refint\HelloWor
 C:\Users\kong\springboot-dotnet\HelloWorldNTest\obj\Debug\net8.0\HelloWorldNTest.pdb
 C:\Users\kong\springboot-dotnet\HelloWorldNTest\obj\Debug\net8.0\HelloWorldNTest.genruntimeconfig.cache
 C:\Users\kong\springboot-dotnet\HelloWorldNTest\obj\Debug\net8.0\ref\HelloWorldNTest.dll
+C:\Users\kong\springboot-dotnet\HelloWorldNTest\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+C:\Users\kong\springboot-dotnet\HelloWorldNTest\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

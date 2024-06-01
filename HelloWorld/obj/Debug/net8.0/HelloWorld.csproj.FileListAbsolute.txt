@@ -5,8 +5,11 @@ C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\HelloWorld.deps.json
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\HelloWorld.runtimeconfig.json
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\HelloWorld.dll
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\HelloWorld.pdb
+C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\System.Net.Http.Formatting.dll
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\kong\springboot-dotnet\HelloWorld\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
