@@ -35,3 +35,5 @@ C:\Users\kong\springboot-dotnet\HelloWorld\obj\Release\net8.0\refint\HelloWorld.
 C:\Users\kong\springboot-dotnet\HelloWorld\obj\Release\net8.0\HelloWorld.pdb
 C:\Users\kong\springboot-dotnet\HelloWorld\obj\Release\net8.0\HelloWorld.genruntimeconfig.cache
 C:\Users\kong\springboot-dotnet\HelloWorld\obj\Release\net8.0\ref\HelloWorld.dll
+C:\Users\kong\springboot-dotnet\HelloWorld\bin\Release\net8.0\SendGrid.dll
+C:\Users\kong\springboot-dotnet\HelloWorld\bin\Release\net8.0\StarkbankEcdsa.dll

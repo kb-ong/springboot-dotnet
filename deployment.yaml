@@ -1,0 +1,18 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: springboot-dotnet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-dotnet
+  template:
+    metadata:
+      labels:
+        app: springboot-dotnet
+    spec:
+      containers:
+        - name: springboot-dotnet
+          image: "riko20xx/springboot-dotnet:latest"
+          imagePullPolicy: Always

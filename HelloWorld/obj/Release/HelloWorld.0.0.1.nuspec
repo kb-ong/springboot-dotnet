@@ -5,11 +5,12 @@
     <version>0.0.1</version>
     <authors>HelloWorld</authors>
     <description>Package Description</description>
-    <repository type="git" commit="6e13aab02b288476ebb07f26cf59a34933c32ce0" />
+    <repository type="git" commit="01fc7c1c213c1e65616c4a11d8772b7b8b9c410c" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Microsoft.AspNet.WebApi.Client" version="6.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.AspNetCore.OpenApi" version="8.0.5" exclude="Build,Analyzers" />
+        <dependency id="SendGrid" version="9.29.3" exclude="Build,Analyzers" />
         <dependency id="Swashbuckle.AspNetCore" version="6.4.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
