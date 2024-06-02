@@ -1,10 +1,10 @@
 pipeline{
-    agent {
-        node {
-            label 'java_jenkins'
-        }
-    }
-	//agent any
+    //agent {
+    //    node {
+    //        label 'java_jenkins'
+    //    }
+    //}
+	agent any
     tools {
          dockerTool 'docker'
          maven 'Maven.3.9.6' 
