@@ -72,20 +72,20 @@ pipeline{
               }
           }
         }
-		post {
-			always {
-				archiveArtifacts artifacts: 'trivy.txt', fingerprint: true
-				publishHTML(
-					[allowMissing: false, 
-					alwaysLinkToLastBuild: false, 
-					keepAll: false, 
-					reportDir: '.', 
-					reportFiles: 'trivy.txt', 
-					reportName: 'TrivyReport', 
-					reportTitles: '', 
-					useWrapperFileDirectly: true]
-				)
-			}
-		}
     }
+	post {
+		always {
+			archiveArtifacts artifacts: 'trivy.txt', fingerprint: true
+			publishHTML(
+				[allowMissing: false, 
+				alwaysLinkToLastBuild: false, 
+				keepAll: false, 
+				reportDir: '.', 
+				reportFiles: 'trivy.txt', 
+				reportName: 'TrivyReport', 
+				reportTitles: '', 
+				useWrapperFileDirectly: true]
+			)
+		}
+	}	
 }
