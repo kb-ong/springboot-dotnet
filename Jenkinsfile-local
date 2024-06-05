@@ -18,8 +18,8 @@ pipeline{
         DOCKER_HOST = "tcp://172.17.0.2:2375"
         DOCKER_CREDS = credentials('docker-token')
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
- 		    SONARQUBE_HOST = "http://3.107.48.153:9000"
-		    SONARQUBE_TOKEN = credentials('sonarqube-token')
+ 	SONARQUBE_HOST = "http://172.27.210.223:9000"
+	SONARQUBE_TOKEN = credentials('sonarqube-token')
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
         PATH= "/root/.dotnet/tools/:$PATH"
     }
@@ -37,7 +37,7 @@ pipeline{
         stage('Packaging') {
           steps {
             dotnetPublish outputDirectory: 'app/', sdk: 'dotnetsdk', selfContained: false
-			dotnetPack project: '.', sdk: 'dotnetsdk'
+	    dotnetPack project: '.', sdk: 'dotnetsdk'
           }
         }
         stage('Build image') {
