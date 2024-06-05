@@ -16,9 +16,10 @@ pipeline{
         DOCKER_IMAGE_NAME = "riko20xx/springboot-dotnet:latest"
         DOCKER_IMAGE = ""
         DOCKER_HOST = "tcp://172.17.0.2:2375"
+	NUGET_URL = "http://172.27.210.223:8083/repository/nuget-hosted/"
         DOCKER_CREDS = credentials('docker-token')
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
- 	SONARQUBE_HOST = "http://172.27.210.223:9000"
+	SONARQUBE_HOST = "http://172.27.210.223:9000"
 	SONARQUBE_TOKEN = credentials('sonarqube-token')
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
         PATH= "/root/.dotnet/tools/:$PATH"
@@ -37,14 +38,14 @@ pipeline{
         stage('Packaging') {
           steps {
             dotnetPublish outputDirectory: 'app/', sdk: 'dotnetsdk', selfContained: false
-	    dotnetPack project: '.', sdk: 'dotnetsdk'
+			dotnetPack project: '.', sdk: 'dotnetsdk'
           }
         }
         stage('Build image') {
           steps {           
             script{                
-                withDockerRegistry(credentialsId: 'jenkins_docker_token', toolName: 'docker', url: '') {                   
-                    dockerImage = docker.build registry + ":latest"
+                withDockerRegistry(credentialsId: 'docker-login', toolName: 'docker261', url: '') {                    
+                    dockerImage = docker.build "${DOCKER_IMAGE_NAME}"
                 }
             }
           }
@@ -52,7 +53,7 @@ pipeline{
         stage('Trivy Scanning') {
            steps {
               sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh |sh -s -- -b /usr/local/bin v0.51.2'             
-              sh 'trivy image --debug --scanners vuln --timeout 30m --no-progress -o trivy.txt ${registry}:latest'
+              sh 'trivy image --debug --scanners vuln --timeout 30m --no-progress -o trivy.txt ${DOCKER_IMAGE_NAME}'
            }
         }	
         stage('SonarQube Analysis') {
@@ -68,7 +69,7 @@ pipeline{
         stage('Push image') {
           steps {           
             script{                
-                withDockerRegistry(credentialsId: 'jenkins_docker_token', toolName: 'docker', url: '') {                    
+                withDockerRegistry(credentialsId: 'docker-login', toolName: 'docker261', url: '') {
                     dockerImage.push()
                 }
             }
@@ -76,12 +77,12 @@ pipeline{
         }    
         stage('Publish Artifact') {
           steps {           
-			 dotnetNuGetPush apiKeyId: 'nexus-api-key', root: 'HelloWorld/bin/Release/HelloWorld.0.0.1.nupkg', sdk: 'dotnetsdk', source: 'http://3.107.48.153:8083/repository/nuget-hosted/'
+			 dotnetNuGetPush apiKeyId: 'nexus-api-key', root: 'HelloWorld/bin/Release/HelloWorld.0.0.1.nupkg', sdk: 'dotnetsdk', source: '${NUGET_URL}'
           }
         }
         stage('Deploying image to k8s') {
           steps {
-              withKubeConfig(credentialsId: 'kubernetes_token', clusterName: 'aks-mylife-uat-az1-poc1', contextName: 'aks-mylife-uat-az1-poc1', namespace: '', restrictKubeConfigAccess: false, serverUrl: 'https://aks-mylife-uat-az1-poc1-dns-ror8tpjt.hcp.southeastasia.azmk8s.io:443') {
+              withKubeConfig(credentialsId: 'k8s-deployer-token', clusterName: 'kubernetes-admin@kubernetes', contextName: 'kubernetes-admin@kubernetes', namespace: '', restrictKubeConfigAccess: false, serverUrl: 'https://172.27.210.223:6443') {
                  sh 'curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"'
                  sh 'chmod u+x ./kubectl'
                  sh './kubectl apply -f deployment.yaml -n default'
