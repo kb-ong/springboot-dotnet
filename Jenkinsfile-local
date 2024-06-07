@@ -12,7 +12,7 @@ pipeline{
          git 'git'
          dotnetsdk 'dotnetsdk'
     }
-    environmen {
+    environment {
 		DOCKER_IMAGE_NAME = "riko20xx/springboot-dotnet:latest"
         DOCKER_IMAGE = ""
         DOCKER_HOST = "tcp://172.17.0.2:2375"
