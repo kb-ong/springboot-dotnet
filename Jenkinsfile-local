@@ -17,7 +17,7 @@ pipeline{
         DOCKER_IMAGE = ""
         DOCKER_HOST = "tcp://172.17.0.2:2375"
 		NUGET_PUSH_PKG_URL = "http://172.27.210.223:8083/repository/nuget-hosted/"
-		NUGET_PULL_PKG_URL = "http://172.27.210.223:8083/repository/nuget-group/"
+		NUGET_PULL_PKG_URL = "http://172.27.210.223:8083/repository/nuget-group/index.json"
         DOCKER_CREDS = credentials('docker-token')
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 		SONARQUBE_HOST = "http://172.27.210.223:9000"
