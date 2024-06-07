@@ -25,7 +25,8 @@ pipeline{
     }
     stages{
         stage('Compiling') {
-          steps {		    
+          steps {
+		    sh 'dotnet nuget add source ${NUGET_URL}' 
             dotnetBuild project: '.', sdk: 'dotnetsdk'
           }
         }
