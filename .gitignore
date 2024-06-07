@@ -1,4 +1,4 @@
-.sonarqube/
-bin/
-obj/
-TestsResults/
+**/.sonarqube/
+**/bin/
+**/obj/
+**/TestsResults/
