@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kong\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj": {}
+    "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kong\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj": {
+    "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kong\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj",
+        "projectUniqueName": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj",
         "projectName": "HelloWorldNTest",
-        "projectPath": "C:\\Users\\kong\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj",
-        "packagesPath": "C:\\Users\\kong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kong\\springboot-dotnet\\HelloWorldNTest\\obj\\",
+        "projectPath": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorldNTest\\HelloWorldNTest.csproj",
+        "packagesPath": "C:\\Users\\riko2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorldNTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kong\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\riko2\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\kong\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj": {
-                "projectPath": "C:\\Users\\kong\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj"
+              "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj": {
+                "projectPath": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj"
               }
             }
           }
@@ -88,21 +88,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kong\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj": {
-      "version": "0.0.1",
+    "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj": {
+      "version": "0.0.2",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kong\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\kong\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj",
-        "packagesPath": "C:\\Users\\kong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kong\\springboot-dotnet\\HelloWorld\\obj\\",
+        "projectPath": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorld\\HelloWorld.csproj",
+        "packagesPath": "C:\\Users\\riko2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riko2\\code\\dotnet\\springboot-dotnet\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kong\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\riko2\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -167,7 +167,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "HelloWorld/0.0.1": {
+      "HelloWorld/0.0.2": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Client": "6.0.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.5",
@@ -133,7 +133,7 @@
     }
   },
   "libraries": {
-    "HelloWorld/0.0.1": {
+    "HelloWorld/0.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
