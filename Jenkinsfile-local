@@ -76,7 +76,7 @@ pipeline{
         }    
         stage('Publish Artifact') {
           steps {
-			 dotnetNuGetPush apiKeyId: 'nexus-api-key', root: 'HelloWorld/bin/Release/HelloWorld.0.0.1.nupkg', sdk: 'dotnetsdk', source: '${NUGET_URL}'
+			 dotnetNuGetPush apiKeyId: 'dotnet-nuget-api-key', root: 'HelloWorld/bin/Release/HelloWorld.0.0.1.nupkg', sdk: 'dotnetsdk', source: '${NUGET_URL}'
           }
         }
         stage('Deploying image to k8s') {
